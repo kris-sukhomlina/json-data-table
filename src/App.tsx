@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import data from './data/data-1.json';
+import { Table } from './table-viewer/Table';
+
+import * as S from './table-viewer/Table.style';
+
+// FIXME: date format - non given, otherwise would have used moment
+// FIXME: number values - also not specified in the task
+// FIXME: design
 
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<S.AppContainer>
+			<Table records={data} />
+		</S.AppContainer>
 	);
 }
 
